@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3c8d1c2-ee31-4055-afdf-93a7e143cb45" name="Changes" comment="add hotdog file">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="a3c8d1c2-ee31-4055-afdf-93a7e143cb45" name="Changes" comment="add hotdog file, add hotdogs">
       <change beforePath="$PROJECT_DIR$/hotdog_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/hotdog_app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +46,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.Main.executor": "Run",
+    "Python.hotdog_app.executor": "Run",
     "Python.pizza_app.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -125,7 +125,23 @@
       <option name="project" value="LOCAL" />
       <updated>1716215404104</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add hotdog file, add hotdogs">
+      <option name="closed" value="true" />
+      <created>1716217360742</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1716217360742</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add hotdog file, add hotdogs">
+      <option name="closed" value="true" />
+      <created>1716217371151</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1716217371151</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -135,6 +151,7 @@
     <MESSAGE value="abstract class" />
     <MESSAGE value="add pizza app" />
     <MESSAGE value="add hotdog file" />
-    <option name="LAST_COMMIT_MESSAGE" value="add hotdog file" />
+    <MESSAGE value="add hotdog file, add hotdogs" />
+    <option name="LAST_COMMIT_MESSAGE" value="add hotdog file, add hotdogs" />
   </component>
 </project>

@@ -83,9 +83,9 @@ class FileLogger(Logger):
 
 
 # Registering pizza types
-HotdogFactory.register_hotdog("normal", lambda: Hotdog("normal", ["bun", "sausage", "onion"]))
-HotdogFactory.register_hotdog("cheese", lambda: Hotdog("cheese", ["bun", "sausage", "cheese"]))
-HotdogFactory.register_hotdog("spicy", lambda: Hotdog("spicy", ["bun", "sausage", "jalapenos"]))
+HotdogFactory.register_hotdog("normal", lambda: Hotdog("Normal", ["bun", "sausage", "onion"]))
+HotdogFactory.register_hotdog("cheese", lambda: Hotdog("Cheese", ["bun", "sausage", "cheese"]))
+HotdogFactory.register_hotdog("spicy", lambda: Hotdog("Spicy", ["bun", "sausage", "jalapenos"]))
 HotdogFactory.register_hotdog("custom", lambda toppings: Hotdog("Custom", toppings))
 
 # Example usage
