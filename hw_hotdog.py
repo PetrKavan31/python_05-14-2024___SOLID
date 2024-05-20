@@ -64,9 +64,9 @@ class Order:
         total_cost = 0
         for i in range(len(self.hotdogs)):
             if (i + 1) % 4 != 0:  # every fourth hotdog is free
-                total_cost += 10
+                total_cost += 3.99
 
-        # total_cost = len(self.hotdogs) * 10  # Example cost calculation
+        # total_cost = len(self.hotdogs) * 3.99  # Example cost calculation
         # if len(self.hotdogs) >= 3:
             # total_cost *= 0.9  # apply 10% discount
 
