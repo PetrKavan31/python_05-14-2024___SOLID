@@ -6,3 +6,7 @@ class HotDog(ABC):
         self.recipe = recipe
         self.toppings = toppings
 
+    def __str__(self):
+        pass
+
+    

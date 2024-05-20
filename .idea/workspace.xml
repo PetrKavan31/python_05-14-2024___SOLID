@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3c8d1c2-ee31-4055-afdf-93a7e143cb45" name="Changes" comment="rename file - hw">
+    <list default="true" id="a3c8d1c2-ee31-4055-afdf-93a7e143cb45" name="Changes" comment="abstract class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hw_hotdog.py" beforeDir="false" afterPath="$PROJECT_DIR$/hw_hotdog.py" afterDir="false" />
     </list>
@@ -100,13 +100,22 @@
       <option name="project" value="LOCAL" />
       <updated>1716147674553</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="abstract class">
+      <option name="closed" value="true" />
+      <created>1716151400064</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716151400064</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="new file - main" />
     <MESSAGE value="new file - main&#10;etc." />
     <MESSAGE value="rename file - hw" />
-    <option name="LAST_COMMIT_MESSAGE" value="rename file - hw" />
+    <MESSAGE value="abstract class" />
+    <option name="LAST_COMMIT_MESSAGE" value="abstract class" />
   </component>
 </project>
