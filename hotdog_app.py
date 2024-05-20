@@ -2,8 +2,9 @@ from abc import ABC, abstractmethod
 import json
 '''ABC (Abstract Base Class):'''
 
-# Base Pizza class
-class Pizza(ABC):
+
+# Base Hotdog class
+class Hotdog(ABC):
     def __init__(self, name, toppings):
         self.name = name
         self.toppings = toppings
@@ -15,20 +16,22 @@ class Pizza(ABC):
         if topping not in self.toppings:
             self.toppings.append(topping)
 
-# Pizza Factory using registration to avoid modifying the factory when adding new pizza types
-class PizzaFactory:
-    pizza_types = {}
+
+# Hotdog Factory using registration to avoid modifying the factory when adding new hotdog types
+class HotdogFactory:
+    hotdog_types = {}
 
     @staticmethod
-    def register_pizza(pizza_type, constructor):
-        PizzaFactory.pizza_types[pizza_type] = constructor
+    def register_hotdog(hotdog_type, constructor):
+        HotdogFactory.hotdog_types[hotdog_type] = constructor
 
     @staticmethod
-    def create_pizza(pizza_type, *args):
-        constructor = PizzaFactory.pizza_types.get(pizza_type)
+    def create_hotdog(hotdog_type, *args):
+        constructor = HotdogFactory.hotdog_types.get(hotdog_type)
         if not constructor:
-            raise ValueError(f"Unknown pizza type: {pizza_type}")
+            raise ValueError(f"Unknown hotdog type: {hotdog_type}")
         return constructor(*args)
+
 
 # Payment strategies
 class PaymentMethod(ABC):
@@ -36,30 +39,34 @@ class PaymentMethod(ABC):
     def pay(self, amount):
         pass
 
+
 class CashPayment(PaymentMethod):
     def pay(self, amount):
         print(f"Paid {amount} in cash.")
+
 
 class CardPayment(PaymentMethod):
     def pay(self, amount):
         print(f"Paid {amount} by card.")
 
+
 # Order handling
 class Order:
     def __init__(self, payment_method, logger):
-        self.pizzas = []
+        self.hotdogs = []
         self.payment_method = payment_method
         self.logger = logger
 
-    def add_pizza(self, pizza):
-        self.pizzas.append(pizza)
+    def add_hotdog(self, hotdog):
+        self.hotdogs.append(hotdog)
 
     def checkout(self):
-        total_cost = len(self.pizzas) * 10  # Example cost calculation
+        total_cost = len(self.hotdogs) * 10  # Example cost calculation
         self.payment_method.pay(total_cost)
-        for pizza in self.pizzas:
-            print(pizza)
-        self.logger.log(self.pizzas)
+        for hotdog in self.hotdogs:
+            print(hotdog)
+        self.logger.log(self.hotdogs)
+
 
 # Logger class
 class Logger(ABC):
@@ -67,23 +74,24 @@ class Logger(ABC):
     def log(self, data):
         pass
 
+
 class FileLogger(Logger):
     def log(self, data):
-        with open("orders.txt", "a") as file:
+        with open("orders_hd.txt", "a") as file:
             for item in data:
                 file.write(str(item) + "\n")
 
+
 # Registering pizza types
-PizzaFactory.register_pizza("margherita", lambda: Pizza("Margherita", ["tomato sauce", "mozzarella"]))
-PizzaFactory.register_pizza("pepperoni", lambda: Pizza("Pepperoni", ["tomato sauce", "mozzarella", "pepperoni"]))
-PizzaFactory.register_pizza("hawaiian", lambda: Pizza("Hawaiian", ["tomato sauce", "mozzarella", "pineapple", "ham"]))
-PizzaFactory.register_pizza("vegan", lambda: Pizza("Vegan", ["tomato sauce", "vegan cheese"]))
-PizzaFactory.register_pizza("custom", lambda toppings: Pizza("Custom", toppings))
+HotdogFactory.register_hotdog("normal", lambda: Hotdog("normal", ["bun", "sausage", "onion"]))
+HotdogFactory.register_hotdog("cheese", lambda: Hotdog("cheese", ["bun", "sausage", "cheese"]))
+HotdogFactory.register_hotdog("spicy", lambda: Hotdog("spicy", ["bun", "sausage", "jalapenos"]))
+HotdogFactory.register_hotdog("custom", lambda toppings: Hotdog("Custom", toppings))
 
 # Example usage
 payment_method = CardPayment()
 logger = FileLogger()
 order = Order(payment_method, logger)
-order.add_pizza(PizzaFactory.create_pizza("margherita"))
-order.add_pizza(PizzaFactory.create_pizza("custom", ["onion", "bell peppers"]))
+order.add_hotdog(HotdogFactory.create_hotdog("normal"))
+order.add_hotdog(HotdogFactory.create_hotdog("custom", ["mayo", "bacon"]))
 order.checkout()
