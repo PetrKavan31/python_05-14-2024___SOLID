@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3c8d1c2-ee31-4055-afdf-93a7e143cb45" name="Changes" comment="add hotdog discount">
-      <change beforePath="$PROJECT_DIR$/hw_hotdog.py" beforeDir="false" afterPath="$PROJECT_DIR$/hw_hotdog.py" afterDir="false" />
+    <list default="true" id="a3c8d1c2-ee31-4055-afdf-93a7e143cb45" name="Changes" comment="edit discount">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716235040524</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="edit discount">
+      <option name="closed" value="true" />
+      <created>1716235281316</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1716235281316</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -180,6 +188,7 @@
     <MESSAGE value="it works" />
     <MESSAGE value="it works, modify it" />
     <MESSAGE value="add hotdog discount" />
-    <option name="LAST_COMMIT_MESSAGE" value="add hotdog discount" />
+    <MESSAGE value="edit discount" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit discount" />
   </component>
 </project>
