@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3c8d1c2-ee31-4055-afdf-93a7e143cb45" name="Changes" comment="add pizza app">
-      <change afterPath="$PROJECT_DIR$/hotdog_app.py" afterDir="false" />
+    <list default="true" id="a3c8d1c2-ee31-4055-afdf-93a7e143cb45" name="Changes" comment="add hotdog file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotdog_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/hotdog_app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716189415647</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add hotdog file">
+      <option name="closed" value="true" />
+      <created>1716215404104</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1716215404104</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -126,6 +134,7 @@
     <MESSAGE value="rename file - hw" />
     <MESSAGE value="abstract class" />
     <MESSAGE value="add pizza app" />
-    <option name="LAST_COMMIT_MESSAGE" value="add pizza app" />
+    <MESSAGE value="add hotdog file" />
+    <option name="LAST_COMMIT_MESSAGE" value="add hotdog file" />
   </component>
 </project>
