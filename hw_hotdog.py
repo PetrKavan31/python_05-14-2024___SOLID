@@ -10,7 +10,7 @@ class Hotdog(ABC):
         self.toppings = toppings
 
     def __str__(self):
-        return f"{self.name} with {' and '.join(self.toppings)}"
+        return f"{self.name} hotdog - {' and '.join(self.toppings)}"
 
     def add_topping(self, topping):
         if topping not in self.toppings:
@@ -61,7 +61,15 @@ class Order:
         self.hotdogs.append(hotdog)
 
     def checkout(self):
-        total_cost = len(self.hotdogs) * 10  # Example cost calculation
+        total_cost = 0
+        for i in range(len(self.hotdogs)):
+            if (i + 1) % 4 != 0:  # every fourth hotdog is free
+                total_cost += 10
+
+        # total_cost = len(self.hotdogs) * 10  # Example cost calculation
+        # if len(self.hotdogs) >= 3:
+            # total_cost *= 0.9  # apply 10% discount
+
         self.payment_method.pay(total_cost)
         for hotdog in self.hotdogs:
             print(hotdog)
@@ -82,7 +90,7 @@ class FileLogger(Logger):
                 file.write(str(item) + "\n")
 
 
-# Registering pizza types
+# Registering hotdog types
 HotdogFactory.register_hotdog("normal", lambda: Hotdog("Normal", ["bun", "sausage", "onion"]))
 HotdogFactory.register_hotdog("cheese", lambda: Hotdog("Cheese", ["bun", "sausage", "cheese"]))
 HotdogFactory.register_hotdog("spicy", lambda: Hotdog("Spicy", ["bun", "sausage", "jalapenos"]))
@@ -92,6 +100,7 @@ HotdogFactory.register_hotdog("custom", lambda toppings: Hotdog("Custom", toppin
 payment_method = CashPayment()
 logger = FileLogger()
 order = Order(payment_method, logger)
+order.add_hotdog(HotdogFactory.create_hotdog("normal"))
 order.add_hotdog(HotdogFactory.create_hotdog("normal"))
 order.add_hotdog(HotdogFactory.create_hotdog("cheese"))
 order.add_hotdog(HotdogFactory.create_hotdog("cheese"))
