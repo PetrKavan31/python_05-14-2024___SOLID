@@ -33,6 +33,18 @@ class HotdogFactory:
         return constructor(*args)
 
 
+# Stock of ingredients for making hot dogs
+class Stock:
+    ingredients = {}
+
+    @staticmethod
+    def register_ingredient(ingredient, constructor_stock):
+        Stock.ingredients[ingredient] = constructor_stock
+
+    @staticmethod
+    def get_ingredient
+
+
 # Payment strategies
 class PaymentMethod(ABC):
     @abstractmethod
